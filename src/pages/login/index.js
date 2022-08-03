@@ -16,12 +16,12 @@ export default function Login() {
     ];
   return (
       <>
-      <div className='gradient-container'>
-        <div className="absolute hidden md:hidden lg:block md:w-[350px] md:mt-[240px] md:ml-[60px] lg:w-[400px] lg:mt-[240px] lg:ml-[80px] xl:w-[550px] xl:mt-[190px] xl:ml-[120px] 2xl:ml-[140px] transition-all ease-in duration-500">
+      <div className='gradient-container pb-10'>
+        <div className="absolute hidden md:hidden lg:block md:w-[350px] md:mt-[240px] md:ml-[60px] lg:w-[400px] lg:mt-[120px] lg:ml-[80px] xl:w-[450px] xl:mt-[100px] xl:ml-[90px] 2xl:w-[500px] 2xl:ml-[90px] 2xl:mt-[110px] transition-all ease-in duration-500">
             <img src={imageHero}  alt="Hero"/>
         </div>
-        <div className='mx-auto pt-[90px] sm:pt-[90px] md:pt-[100px] lg:pt-[120px] xl:pt-[150px] 2xl:pt-[130px] w-[420px] sm:w-[440px] md:w-[450px] lg:w-[500px] xl:w-[600px] transition-all ease-in duration-500'>
-            <div className='relative bg-white shadow-slate-200 shadow-md rounded-md sm:rounded-md md:rounded-md lg:rounded-lg xl:rounded-xl px-5 py-10'>
+        <div className='mx-auto pt-[50px] sm:pt-[50px] md:pt-[50px] lg:pt-[50px] xl:pt-[40px] 2xl:pt-[40px] w-[420px] sm:w-[440px] md:w-[450px] lg:w-[500px] xl:w-[530px] 2xl:w-[560px] transition-all ease-in duration-500'>
+            <div className='relative bg-white shadow-slate-200 shadow-md rounded-md sm:rounded-md md:rounded-md lg:rounded-lg xl:rounded-xl px-5 py-4 lg:py-7 xl:py-7 2xl:py-8'>
                     <h4>Hello, &#128075;</h4>
                     <h1 className='font-bold text-2xl mt-2'>Welcome to the black parade</h1>
                     <p className='text-neutral-500 mt-2'>Please <span className='font-bold'>enter your details</span> here</p>
