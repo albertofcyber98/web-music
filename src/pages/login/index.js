@@ -8,6 +8,8 @@ import iconApple from '../../assets/icon/apple.png'
 import iconFace from '../../assets/icon/facebook.png'
 import Button from '../../components/button';
 import Input from '../../components/input';
+import { Formik, Form } from 'formik'
+import * as Yup from 'yup';
 
 export default function Login() {
     const dataIcon = [
@@ -31,7 +33,27 @@ export default function Login() {
                 <h4>Hello, &#128075;</h4>
                 <h1 className='font-bold text-2xl mt-2'>Welcome to the black parade</h1>
                 <p className='text-neutral-500 mt-2'>Please <span className='font-bold'>enter your details</span> here</p>
-                    <form>
+                <Formik
+                    initialValues={{ password: '', email: '' }}
+                    validationSchema={Yup.object({
+                        email: Yup.string()
+                            .email('Invalid email address')
+                            .max(70,'No more than 70 characters')
+                            .min(5, 'Minimum 5 characters')
+                            .required('Required'),
+                        password: Yup.string()
+                            .max(25,'No more than 25 characters')
+                            .min(8, 'Minimum 8 characters')
+                            .required('Required'),
+                    })}
+                    onSubmit={(values, { setSubmitting }) => {
+                        setTimeout(() => {
+                        alert(JSON.stringify(values, null, 2));
+                        setSubmitting(false);
+                        }, 400);
+                    }}
+                >
+                    <Form>
                         <Input
                             label='Email or Username'
                             type='text'
@@ -44,8 +66,9 @@ export default function Login() {
                             name='password'
                             placeholders='Minimun 8 character'
                         />
-                        <Button type='primary' label='Log in'/>
-                    </form>
+                        <Button type='submit' types='primary' label='Log in'/>
+                    </Form>
+                </Formik>
                 <p className='text-blue-600 mt-2 text-right underline'>Forget Password?</p>
                 <div className='mt-5'>
                     <hr />
