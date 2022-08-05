@@ -57,7 +57,7 @@ export default function Login() {
                     <div className='flex mt-3 justify-center'>
                         {dataIcon.map((data) => { 
                             return (
-                            <div className='mx-1'>
+                            <div className='mx-1' key={data.id}>
                                 <img src={data.icon} width={data.size} className='cursor-pointer' alt="icon" key={data.id} />
                             </div>
                             )
